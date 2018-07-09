@@ -1,0 +1,39 @@
+﻿@Model registerViewModel
+
+<h2>Registration Page</h2>
+
+<form method="post" asp-controller="Account" asp-action="Register">
+
+    <!--  for the errors -->
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div>
+        <label asp-for="Role"></label>
+        <input asp-for="Role" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <div>
+        <label asp-for="Confirm_Password"></label>
+        <input asp-for="Confirm_Password" />
+        <span asp-validation-for="Confirm_Password"></span>
+    </div>
+
+    <div>
+        <input type="submit" value="Register" />
+    </div>
+
+</form>
+
